@@ -1,0 +1,155 @@
+/* ======================================= */
+/* ========|| Custom Properties ||======== */
+/* ======================================= */
+:root {
+  --clr-primary-300: hsl(276, 100%, 81%);
+  --clr-primary-400: hsl(289, 100%, 72%);
+  --clr-primary-500: hsl(293, 100%, 63%);
+  --clr-primary-600: hsl(264, 100%, 61%);
+  --clr-primary-700: hsl(276, 55%, 52%);
+  --clr-primary-800: hsl(271, 36%, 24%);
+
+  --clr-neutral-100: hsl(0, 0%, 100%);
+  --clr-neutral-200: hsl(270, 20%, 96%);
+  --clr-neutral-300: hsl(206, 6%, 79%);
+  --clr-neutral-400: hsl(270, 7%, 64%);
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+
+  --ff-base: "Rubik", sans-serif;
+
+  --spacing-50: 4px;
+  --spacing-100: 8px;
+  --spacing-150: 12px;
+  --spacing-200: 16px;
+  --spacing-250: 20px;
+  --spacing-300: 24px;
+  --spacing-350: 28px;
+  --spacing-400: 32px;
+  --spacing-500: 40px;
+  --spacing-600: 48px;
+  --spacing-700: 60px;
+  --spacing-800: 100px;
+  --spacing-900: 160px;
+  --spacing-1000: 240px;
+
+  --fs-mobile-body: 1rem;
+  --fs-desktop-body: 1.125rem;
+  --fs-mobile-title: 2.375rem;
+  --fs-desktop-title: 2.5rem;
+  --fs-mobile-sub-title: ;
+  --fs-desktop-sub-title: ;
+  --fs-mobile-btn: ;
+  --fs-Desktop-btn: ;
+
+  --fs-body: ;
+  --fs-text: ;
+  --fs-title: clamp(
+    var(--fs-mobile-title),
+    2.3315rem + 0.2174vw,
+    var(--fs-desktop-title)
+  );
+  --fs-sub-title: ;
+  --fs-button: ;
+
+  --fs-message: ;
+  --fs-user: ;
+  --fs-price: ;
+}
+
+/* ======================================= */
+/* ===============|| Reset ||============= */
+/* ======================================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  min-height: 100vh;
+}
+
+body {
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  vertical-align: middle;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p {
+  overflow-wrap: break-word;
+  text-wrap: pretty; /*prevent alone words*/
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+/* ======================================= */
+/* ========|| General Styling ||========== */
+/* ======================================= */
+body {
+  font-family: var(--ff-base);
+}
+h1 {
+  font-size: var(--fs-title);
+  font-weight: var(--fw-medium);
+}
+/* ======================================= */
+/* ==========|| Header Style ||=========== */
+/* ======================================= */
+
+/* ======================================= */
+/* ===========|| Main Style ||============ */
+/* ======================================= */
+
+/* =============|| Buttons ||============= */
+
+/* =============|| Inputs ||============= */
+
+/* ======================================= */
+/* ==========|| footer Style ||=========== */
+/* ======================================= */
+
+/* ======================================= */
+/* ============|| Utilities ||============ */
+/* ======================================= */
+
+/* ======================================= */
+/* ===========|| Breakpoints ||=========== */
+/* ======================================= */
