@@ -54,9 +54,27 @@
   --fs-sub-title: ;
   --fs-button: ;
 
-  --fs-message: ;
-  --fs-user: ;
-  --fs-price: ;
+  --fs-mobile-chat: 0.625rem;
+  --fs-desktop-chat: 0.75rem;
+  --fs-chat: clamp(
+    var(--fs-mobile-chat),
+    0.5815rem + 0.2174vw,
+    var(--fs-desktop-chat)
+  );
+  --fs-mobile-user: 0.875rem;
+  --fs-desktop-user: 1rem;
+  --fs-user: clamp(
+    var(--fs-mobile-user),
+    0.8315rem + 0.2174vw,
+    var(--fs-desktop-user)
+  );
+  --fs-mobile-price: 0.875rem;
+  --fs-desktop-price: 1rem;
+  --fs-price: clamp(
+    var(--fs-mobile-price),
+    0.8315rem + 0.2174vw,
+    var(--fs-desktop-price)
+  );
 }
 
 /* ======================================= */
@@ -131,13 +149,17 @@ h1 {
   font-weight: var(--fw-medium);
 }
 /* ======================================= */
-/* ==========|| Header Style ||=========== */
-/* ======================================= */
-
-/* ======================================= */
 /* ===========|| Main Style ||============ */
 /* ======================================= */
-
+.section__grid__mobile-ui {
+  font-size: var(--fs-chat);
+}
+.mobile-ui__user {
+  font-size: var(--fs-user);
+}
+.mobile-ui__price {
+  font-size: var(--fs-price);
+}
 /* =============|| Buttons ||============= */
 
 /* =============|| Inputs ||============= */
@@ -149,6 +171,10 @@ h1 {
 /* ======================================= */
 /* ============|| Utilities ||============ */
 /* ======================================= */
+
+.text--primary {
+  color: var(--clr-primary-600);
+}
 
 /* ======================================= */
 /* ===========|| Breakpoints ||=========== */
