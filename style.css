@@ -154,12 +154,6 @@ h1 {
 .section__grid__mobile-ui {
   font-size: var(--fs-chat);
 }
-.mobile-ui__user {
-  font-size: var(--fs-user);
-}
-.mobile-ui__price {
-  font-size: var(--fs-price);
-}
 /* =============|| Buttons ||============= */
 
 /* =============|| Inputs ||============= */
