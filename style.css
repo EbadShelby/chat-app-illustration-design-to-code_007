@@ -157,7 +157,7 @@ h1 {
   justify-content: space-between;
   position: relative;
   overflow: hidden;
-  border-radius: 1.5em 1.5em .5em .5em;
+  border-radius: 1.5em 1.5em 0.5em 0.5em;
   background: linear-gradient(
     to right,
     var(--clr-primary-600),
@@ -182,12 +182,12 @@ h1 {
   display: flex;
   align-items: center;
   gap: var(--spacing-100);
-
-
 }
-.chat__header-back{
-  max-width: .75em;
+.chat__header-back {
+  max-width: 0.75em;
+  filter: brightness(0) invert(1);
 }
+
 .chat__header-avatar {
   max-width: 2.5em;
   border: 1px solid var(--clr-neutral-200);
@@ -203,8 +203,10 @@ h1 {
   opacity: 0.7;
   font-size: clamp(0.5rem, 0.4565rem + 0.2174vw, 0.625rem);
 }
+
 .chat__header__menu {
-  width: .25em;
+  width: 0.25em;
+  filter: brightness(0) invert(1);
 }
 /* ======================================= */
 /* ===========|| Main Style ||============ */
@@ -212,16 +214,17 @@ h1 {
 .mobile-ui__container {
   box-shadow: 0 10px 20px 10px rgba(0, 0, 0, 0.1);
   border-radius: 1.5em;
-  max-width: 15em;
+  max-width: 15.5em;
   margin: 2em;
+  padding: var(--spacing-100);
 }
 .section__grid__mobile-ui {
   font-size: var(--fs-chat);
-  padding: var(--spacing-150);
+  background-color: var(--clr-neutral-200);
+  border-radius: 1.5em;
 }
-
-.section__grid__description {
-  text-align: center;
+.section__grid__mobile-ui > :not(:first-child) {
+  padding-inline: var(--spacing-100);
 }
 .chat__photo {
   max-width: 3em;
