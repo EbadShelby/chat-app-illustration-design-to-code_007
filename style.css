@@ -153,6 +153,8 @@ h1 {
 /* ======================================= */
 .chat__header {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   position: relative;
   overflow: hidden;
   border-radius: 1.5em 1.5em .5em .5em;
@@ -161,12 +163,13 @@ h1 {
     var(--clr-primary-600),
     var(--clr-primary-500)
   );
-  padding-block: var(--spacing-400) var(--spacing-200);
+  padding-block: var(--spacing-500) var(--spacing-200);
+  padding-inline: var(--spacing-300);
 }
 .chat__header::after {
   content: "";
   position: absolute;
-  top: -1em;
+  top: -1.25em;
   right: 0;
   left: 50%;
   transform: translate(-50%);
@@ -175,17 +178,33 @@ h1 {
   height: 3em;
   background-color: var(--clr-neutral-100);
 }
+.chat__header-user-info-container {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-100);
+
+
+}
+.chat__header-back{
+  max-width: .75em;
+}
 .chat__header-avatar {
-  max-width: 2em;
+  max-width: 2.5em;
   border: 1px solid var(--clr-neutral-200);
   border-radius: 100vmax;
 }
 .chat__header__user-name {
   color: var(--clr-neutral-200);
+  font-weight: var(--fw-medium);
+  text-wrap: nowrap;
 }
 .chat__header__status {
   color: var(--clr-neutral-300);
   opacity: 0.7;
+  font-size: clamp(0.5rem, 0.4565rem + 0.2174vw, 0.625rem);
+}
+.chat__header__menu {
+  width: .25em;
 }
 /* ======================================= */
 /* ===========|| Main Style ||============ */
