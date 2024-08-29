@@ -188,7 +188,7 @@ h1 {
 }
 
 .chat__header-avatar {
-  width: 2em;
+  width: 2.25em;
   border: 1px solid var(--clr-neutral-200);
   border-radius: 100vmax;
 }
@@ -210,6 +210,14 @@ h1 {
 /* ======================================= */
 /* ===========|| Main Style ||============ */
 /* ======================================= */
+.section__grid {
+  max-width: 86%;
+  margin-inline: auto;
+  margin-block: var(--spacing-500);
+  display: grid;
+  gap: var(--spacing-400);
+}
+
 .mobile-ui__container {
   box-shadow: 0 10px 20px 10px rgba(0, 0, 0, 0.1);
   border-radius: 1.5em;
@@ -233,7 +241,7 @@ h1 {
   max-width: 20ch;
 }
 .message-text {
-  font-size: .5rem;
+  font-size: 0.5rem;
 }
 .message-text,
 .option {
@@ -256,6 +264,7 @@ h1 {
 .chat__photo-group {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .chat__photo {
   max-width: 3.5em;
@@ -289,7 +298,7 @@ h1 {
 .option__price {
   margin-left: auto;
   font-weight: var(--fw-bold);
-  font-size: .65rem;
+  font-size: 0.65rem;
 }
 
 .chat__input-group {
@@ -302,11 +311,11 @@ h1 {
   padding: 1em;
   min-width: 0;
   border-radius: 100vmax;
-  font-size: .625rem;
+  font-size: 0.625rem;
   padding-left: 1.5em;
 }
 .input::placeholder {
-  opacity: .5;
+  opacity: 0.5;
 }
 .send-button {
   background-color: var(--clr-primary-800);
@@ -315,7 +324,7 @@ h1 {
   aspect-ratio: 1;
   border: none;
   position: absolute;
-  top: .5em;
+  top: 0.5em;
   right: 1em;
   transform: rotate(180deg);
   cursor: pointer;
@@ -326,7 +335,16 @@ h1 {
   height: 1em;
 }
 
-
+.section__grid__description {
+  text-align: center;
+}
+.description__title {
+  color: var(--clr-primary-800);
+  margin-bottom: var(--spacing-100);
+}
+.description__text {
+  color: var(--clr-neutral-400);
+}
 /* =============|| Buttons ||============= */
 
 /* =============|| Inputs ||============= */
