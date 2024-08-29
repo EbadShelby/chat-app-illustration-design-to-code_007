@@ -140,6 +140,8 @@ h6 {
 /* ======================================= */
 body {
   font-family: var(--ff-base);
+  display: grid;
+  place-content: center;
 }
 h1 {
   font-size: var(--fs-title);
@@ -211,19 +213,34 @@ h1 {
 /* ===========|| Main Style ||============ */
 /* ======================================= */
 .section__grid {
-  max-width: 86%;
+  max-width: 80%;
   margin-inline: auto;
   margin-block: var(--spacing-500);
   display: grid;
   gap: var(--spacing-400);
 }
-
+.section__grid::before {
+  content: "";
+  position: absolute;
+  left: -14em;
+  top: -15em;
+  width: 25em;
+  height: 45em;
+  border-radius: 100vmax;
+  z-index: -1;
+  background: linear-gradient(
+    45deg,
+    var(--clr-primary-600),
+    var(--clr-primary-500)
+  );
+}
 .mobile-ui__container {
   box-shadow: 0 10px 20px 10px rgba(0, 0, 0, 0.1);
   border-radius: 1.5em;
-  max-width: 15.5em;
-  margin: 2em;
+  width: min(100%, 15.5em);
+  margin-inline: auto;
   padding: var(--spacing-100);
+  background-color: var(--clr-neutral-100);
 }
 .section__grid__mobile-ui {
   font-size: var(--fs-chat);
@@ -324,7 +341,7 @@ h1 {
   aspect-ratio: 1;
   border: none;
   position: absolute;
-  top: 0.5em;
+  top: 0.7em;
   right: 1em;
   transform: rotate(180deg);
   cursor: pointer;
@@ -337,6 +354,8 @@ h1 {
 
 .section__grid__description {
   text-align: center;
+  display: grid;
+  place-content: center;
 }
 .description__title {
   color: var(--clr-primary-800);
@@ -364,3 +383,27 @@ h1 {
 /* ======================================= */
 /* ===========|| Breakpoints ||=========== */
 /* ======================================= */
+
+@media (min-width: 800px) {
+  .section__grid {
+    grid-template-columns: 1fr 1fr;
+    max-width: 70%;
+  }
+  .section__grid::before {
+    left: -9.5em;
+    top: -30em;
+    width: 30em;
+    height: 80em;
+  }
+  .section__grid__description {
+    text-align: start;
+  }
+  .send-button {
+    top: 0.5em;
+  }
+}
+@media (min-width: 1200px) {
+  .section__grid::before {
+    width: 45em;
+  }
+}
